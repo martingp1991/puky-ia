@@ -36,7 +36,7 @@ const Main = () => {
             <div className="relative block w-full overflow-hidden transition-all border rounded-lg shadow aspect-video border-zinc-200 hover:shadow-lg">
               <img
                 alt={`Template for prompt: ${image.title}`}
-                className="object-cover object-top hover:cursor-pointer"
+                className="object-cover object-top transition-transform transform hover:cursor-pointer hover:scale-110"
                 style={{
                   position: 'absolute',
                   height: '100%',
@@ -90,7 +90,7 @@ const Main = () => {
                   className="float-right p-1 ml-auto text-2xl leading-none text-black bg-transparent border-0 outline-none focus:outline-none"
                   onClick={closeModal}
                 >
-                  <FaTimes className='text-lg text-zinc-200' />
+                  <FaTimes className='text-lg text-zinc-900 dark:text-zinc-200' />
                 </button>
               </div>
               <div className="relative flex-auto p-6">
@@ -116,7 +116,7 @@ const Main = () => {
                         key={index}
                         src={variantImageUrl}
                         alt={`${selectedImage.title} - Variant ${index + 1}`}
-                        className="object-cover w-full h-32 opacity-50 cursor-pointer hover:opacity-100"
+                        className="object-cover object-top w-full h-32 transition-transform transform opacity-50 cursor-pointer hover:opacity-100 hover:cursor-pointer hover:scale-110"
                         onClick={() => handleImageClick({ ...selectedImage, imageUrl: variantImageUrl })}
                       />
                     ))}
