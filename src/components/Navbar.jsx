@@ -1,12 +1,12 @@
 import { useState, useEffect, useRef } from "react";
 import { HiOutlineMenuAlt4 } from "react-icons/hi";
 import { BsCheck2 } from "react-icons/bs";
-import { IoIosLogOut } from "react-icons/io";
 import { AiOutlineAppstoreAdd } from "react-icons/ai";
 import { FaQuestionCircle } from "react-icons/fa";
 
 import Switch from "./Switch";
 import Tickets from "./Tickets";
+import Login from "./Login";
 
 const Navbar = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -31,7 +31,7 @@ const Navbar = () => {
 
   return (
     <div>
-      <nav className="fixed top-0 left-0 right-0 z-20 px-1 bg-zinc-200 dark:bg-zinc-900">
+      <nav className="fixed top-0 left-0 right-0 z-20 px-1 bg-zinc-200 dark:bg-zinc-900 transition-background ">
         <div className="sticky top-0 z-20 flex items-center justify-between w-full px-4 py-3 h-14">
           <a href="/" className="flex items-center gap-2">
             <img
@@ -54,7 +54,7 @@ const Navbar = () => {
               aria-expanded={isDropdownOpen}
               onClick={toggleDropdown}
             >
-              <HiOutlineMenuAlt4 className="w-4 h-4 dark:invert" />
+              <HiOutlineMenuAlt4 className="w-4 h-4 dark:invert " />
             </button>
 
             <div
@@ -81,10 +81,7 @@ const Navbar = () => {
                 </li>
 
                 <li className="flex items-center">
-                  <a className="flex items-center px-3 py-2 text-gray-600 transition-colors duration-300 transform rounded-lg dark:text-gray-300 dark:hover:text-gray-200 hover:text-gray-400" href="#">
-                    <IoIosLogOut className="w-5 h-5" />
-                    <span className="mx-2 text-sm font-medium">Logout</span>
-                  </a>
+                  <Login />
                 </li>
 
                 <hr className="my-1 border-zinc-300 dark:border-zinc-600" />
