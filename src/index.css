@@ -10,6 +10,11 @@ html {
 }
 
 
+.transition-background {
+  transition: background-color 0.3s ease;
+}
+
+
 
 /* Modal image animation */
 .animated {
